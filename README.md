@@ -8,11 +8,13 @@ This project is designed to monitor the occupancy of a team room using an ESP32 
 
 When the team room is available, it looks like this:
 
-![]("image/Avaliable room.jpg")
+![Avaliable room](https://user-images.githubusercontent.com/42496003/220517815-1320d102-abc1-435c-9ff8-528ea3816ab8.jpg)
+
 
 And when it is occupied, it looks like this:
 
-![]("image/Occupied room.jpg")
+![Occupied room](https://user-images.githubusercontent.com/42496003/220517867-3c908d77-fb03-40ec-bbcc-3716d54038b1.jpg)
+
 
 ## Installation and Deployment
 
