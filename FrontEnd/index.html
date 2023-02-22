@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DKU Teamroom Occupancy Checking System</title>
+	<script src="jquery.min.js"></script>
+	<style>
+		body {
+			transition: background-color 0.5s ease;
+			background-color: green;
+			text-align: center;
+			font-size: 3rem;
+			font-weight: bold;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	</style>
+	<script>
+		$(document).ready(function() {
+			// Function to make a request to the server and update the HTML elements
+			function pollServer() {
+				$.ajax({
+					url: "/test",
+					type: "GET",
+					success: function(response) {
+						if (response === "true") {
+							$("body").css("background-color", "red");
+							$("#status").html("Occupied");
+						} else {
+							$("body").css("background-color", "green");
+							$("#status").html("Available");
+						}
+					},
+					error: function(error) {
+						console.log(error);
+					}
+				});
+			}
+
+			// Call the pollServer function every 200ms
+			setInterval(pollServer, 200);
+		});
+	</script>
+</head>
+<body>
+	<div id="status">Available</div>
+</body>
+</html>
