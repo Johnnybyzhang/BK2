@@ -1,3 +1,5 @@
+## This repository is now archived as it is intended for a course that I've already taken.
+
 # BK2 Project
 
 This is a backend for our project written in a healthy mix of Java, HTML, and C++.
